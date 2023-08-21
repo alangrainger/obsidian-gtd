@@ -6,5 +6,13 @@
       ],
       "key": "T"
     }
+  ],
+  "templater-obsidian:Utility/Templates/Tasks menu.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
   ]
 }

@@ -93,10 +93,9 @@ To mark a **project** as priority, add a #🔼 tag. All of the tasks in this pro
 
 ## Someday/Maybe
 
-To flag a task as someday/maybe, just add the tag #someday to the task. You can toggle this quickly by using the task hotkey `Alt+T` and choosing `Toggle #someday`.
-
+To flag a task as someday/maybe, just add the tag #someday to the task. You can toggle this quickly by using the task hotkey `Alt+T` and choosing `Toggle #someday`. You'll need to set up the [Task menu template](Task%20menu%20template.md) for this to work.
 ## Clean-up/Archive completed tasks
 
 If you have a lot of completed tasks on a page and want to archive them to a central location, there's a handy shortcut for that.
 
-On any page press `Alt+T` and choose `Archive/Remove completed tasks`. This will move tasks from that page to the [🗄️ Completed tasks](../01%20Project%20Management/🗄️%20Completed%20tasks.md) page.
+On any page press `Alt+T` and choose `Archive/Remove completed tasks`. This will move tasks from that page to the [🗄️ Completed tasks](../01%20Project%20Management/🗄️%20Completed%20tasks.md) page. You'll need to set up the [Task menu template](Task%20menu%20template.md) for this to work.

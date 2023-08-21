@@ -12,20 +12,20 @@ After some trial-and-error, I managed to write a workable implementation with Da
 ## Features
 
 - Task sequencing
-- Priority and Someday tasks
+- Priority, Waiting-On, and Someday tasks
 - Notification of projects without next actions
 - Requires only the Dataview plugin to be installed (Templater is also recommended)
 - Compatible with Tasks plugin
 - If a task is part of a project, the project information is displayed along with the task in the master task list
-- ⭐ Everything is done from a single Dataview script, which makes it highly configurable and adaptable for almost any use case
+- Everything is done from a single Dataview script, which makes it highly configurable and adaptable for almost any use case
 
-![](./02%20Documentation/attachments/Pasted%20image%2020230821082403.png)
+![](02%20Documentation/attachments/Pasted%20image%2020230821133422.png)
 
 ## How to set up
 
 1. [Download the GTD demo vault](https://github.com/alangrainger/obsidian-gtd/archive/refs/heads/main.zip) and test it out. This is an already-configured working vault which will give you an idea of whether you like the system, and what features of it you might want to implement in your own vault.
 2. The "brains" of the system is a single Dataview script: [tasks.js](02%20Documentation/tasks.js.md). You can put this anywhere in your vault and Dataview will find it. I personally like to put all my scripts in a single folder, like `Utility/Scripts/Dataview`.
-3. You can optionally add the Templater user scripts and template from the `Utility/Scripts/Templater` and `Utility/Templates` folders. If you use this template, make sure to assign it to a hotkey.
+3. You can optionally add the [Task Menu template](02%20Documentation/Task%20menu%20template.md) from the `Utility/Scripts/Templater` and `Utility/Templates` folders. If you use this template, make sure to assign it to a hotkey.
 
 ## Next steps
 

@@ -20,8 +20,8 @@ const globalExclude = {
   ]
 }
 /*
- * When displaying tasks from a project, tasks that fall under headings with these names
- * won't have these headings displayed when showing the project info
+ * When displaying tasks from a project, tasks that fall under headings with these
+ * names won't have these headings displayed when showing the project info
  */
 const hideSubsectionName = [
   'Todo',
