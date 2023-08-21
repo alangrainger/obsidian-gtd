@@ -1,0 +1,244 @@
+{
+  "main": {
+    "id": "8a6b8d023d5fcb96",
+    "type": "split",
+    "children": [
+      {
+        "id": "9a27cf182ed2453f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2819b73154e2294c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 Project Management/✅ Tasks.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e5849d7c5a5a326f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "00dfb2096d56276a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Documentation/How this works.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "004245f125ade49a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 Project Management/🗃️ Projects list.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0282303a99e78455",
+    "type": "split",
+    "children": [
+      {
+        "id": "c80b1b0e73e1bf67",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "55eced498f712238",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8e5c04e6219b69f1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "global",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b30b54105997137d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fd3d63df30b8c4f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "0e7803df207645dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ef28cf274dcb9800",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2455cc8977ecb909",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bd4bc0d182112b19",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "aba0dc17e4d2e6a6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "badfc2fc2a02e3e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4dafe2bbff48c882",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 257.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "e5849d7c5a5a326f",
+  "lastOpenFiles": [
+    "02 Documentation/How this works.md",
+    "README.md",
+    "01 Project Management/✅ Tasks.md",
+    "99 Utility/Scripts/Dataview/tasks.js",
+    "99 Utility/Scripts/Dataview",
+    "99 Utility/Scripts",
+    "99 Utility",
+    "Periodic notes/2023-08-18.md",
+    "02 Documentation/tasks.js.md",
+    "02 Project Management/Projects/Some sample project.md",
+    "02 Documentation/attachments/Pasted image 20230821082403.png",
+    "01 Project Management/🗃️ Projects list.md",
+    "01 Project Management/📝 Next actions list.md",
+    "01 Project Management/Projects/Overhaul TPS reports system.md",
+    "01 Project Management/🗄️ Completed tasks.md",
+    "02 Documentation/GTD/Next Actions.md",
+    "02 Documentation/attachments",
+    "02 Documentation/attachments/Pasted image 20230820170011.png",
+    "01 Project Management/Projects/Take a holiday in Spain.md",
+    "01 Project Management/Projects/Write a how-to guide for GTD in Obsidian.md",
+    "Next Action.md",
+    "Utility/Scripts/Templater/templater_tasks.js",
+    "99 Utility/Scripts/Templater/templater-tasks.js",
+    "Utility/Scripts/Dataview/toc.js",
+    "01 Project Management/Projects",
+    "Utility/Templates/Tasks menu.md",
+    "99 Utility/Templates/Tasks - main menu.md",
+    "99 Utility/Templates/Tasks - Insert new task.md",
+    "Utility/Templates",
+    "90 Resources/GTD.md",
+    "General tasks.md",
+    "Tasks - Tasks.md",
+    "Projects/Proj with tasks.md",
+    "Tasks - Dataview.md",
+    "Docs/Dataview/Understanding Tasks emojis.md",
+    "Tests/Dataview tables.md",
+    "Projects/Proj with headings.md"
+  ]
+}

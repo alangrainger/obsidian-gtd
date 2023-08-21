@@ -1,0 +1,14 @@
+/*
+The CSS snippets below are just my personal preference. 
+You do not need these if you don't want them.
+*/
+
+body {
+  --checklist-done-decoration: none;
+}
+
+.cm-hmd-internal-link,
+.cm-hmd-internal-link .cm-underline,
+a {
+    text-decoration: none !important;
+}
