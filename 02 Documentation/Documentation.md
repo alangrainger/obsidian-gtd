@@ -90,7 +90,9 @@ In [this example project](../01%20Project%20Management/Projects/Overhaul%20TPS%2
 
 **If you don't want the tasks inside a project to be sequential**, you can include the 🟰 emoji anywhere in the heading for that section, and the tasks will be treated as if they are to be done in parallel.
 
-## Priority
+## Statuses
+
+### Priority
 
 Pure GTD [doesn't make distinctions for priority](https://gettingthingsdone.com/2008/08/determining-priority-gtd-style/) in the context of your actions list, but it's nice to have a way to indicate what you should be working on first. In my Obsidian setup, there are no levels of priority, just a flag for "is priority" or not.
 
@@ -98,13 +100,14 @@ To mark any **task** as priority, add the 🔼 symbol anywhere in the task text.
 
 To mark a **project** as priority, add a #🔼 tag. All of the tasks in this project will be marked as priority automatically.
 
-## Waiting on
+### Waiting on
 
 Quickly create a new #waiting-on task by using the `Alt+T` hotkey and choosing `Insert waiting on task`. This is useful when you're in a sequence of tasks in a project. You'll need to set up the [Task menu template](Task%20menu%20template.md) for this to work.
 
-## Someday/Maybe
+### Someday/Maybe
 
 To flag a task as someday/maybe, just add the tag #someday to the task. You can toggle this quickly by using the task hotkey `Alt+T` and choosing `Toggle #someday`. You'll need to set up the [Task menu template](Task%20menu%20template.md) for this to work.
+
 ## Clean-up/Archive completed tasks
 
 If you have a lot of completed tasks on a page and want to archive them to a central location, there's a handy shortcut for that.
