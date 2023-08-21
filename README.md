@@ -23,7 +23,7 @@ After some trial-and-error, I managed to write a workable implementation with Da
 
 ## How to set up
 
-1. Download the GTD demo vault and test it out. This is an already-configured working vault which will give you an idea of whether you like the system, and what features of it you might want to implement in your own vault.
+1. [Download the GTD demo vault](https://github.com/alangrainger/obsidian-gtd/archive/refs/heads/main.zip) and test it out. This is an already-configured working vault which will give you an idea of whether you like the system, and what features of it you might want to implement in your own vault.
 2. The "brains" of the system is a single Dataview script: [tasks.js](02%20Documentation/tasks.js.md). You can put this anywhere in your vault and Dataview will find it. I personally like to put all my scripts in a single folder, like `Utility/Scripts/Dataview`.
 3. You can optionally add the Templater user scripts and template from the `Utility/Scripts/Templater` and `Utility/Templates` folders. If you use this template, make sure to assign it to a hotkey.
 
