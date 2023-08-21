@@ -15,6 +15,7 @@ dv.view('toc')
 ## Tasks
 
 > [!info] A sidenote about tasks
+> 
 > A "task" in GTD is more correctly termed a [Next Action](GTD/Next%20Actions.md). I'll be using the term "task" just to make things simple. Here's a [refresher course on next actions](GTD/Next%20Actions.md), including [the difference between a Next Action list and a standard task list](Next%20Actions#Why%20a%20"Next%20Action%20list"%20is%20so%20critical%20compared%20to%20a%20task%20list).
 
 ### Your Master Task List
