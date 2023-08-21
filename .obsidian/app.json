@@ -1,4 +1,6 @@
 {
   "propertiesInDocument": "hidden",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
 }

@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2819b73154e2294c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Project Management/✅ Tasks.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e5849d7c5a5a326f",
             "type": "leaf",
             "state": {
@@ -30,33 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "00dfb2096d56276a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 Documentation/How this works.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "004245f125ade49a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Project Management/🗃️ Projects list.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -203,22 +166,22 @@
   },
   "active": "e5849d7c5a5a326f",
   "lastOpenFiles": [
-    "02 Documentation/How this works.md",
+    "Periodic notes/2023-08-18.md",
     "README.md",
+    "02 Documentation/How this works.md",
+    "01 Project Management/🗃️ Projects list.md",
     "01 Project Management/✅ Tasks.md",
+    "02 Documentation/GTD/Next Actions.md",
+    "02 Documentation/tasks.js.md",
     "99 Utility/Scripts/Dataview/tasks.js",
     "99 Utility/Scripts/Dataview",
     "99 Utility/Scripts",
     "99 Utility",
-    "Periodic notes/2023-08-18.md",
-    "02 Documentation/tasks.js.md",
     "02 Project Management/Projects/Some sample project.md",
     "02 Documentation/attachments/Pasted image 20230821082403.png",
-    "01 Project Management/🗃️ Projects list.md",
     "01 Project Management/📝 Next actions list.md",
     "01 Project Management/Projects/Overhaul TPS reports system.md",
     "01 Project Management/🗄️ Completed tasks.md",
-    "02 Documentation/GTD/Next Actions.md",
     "02 Documentation/attachments",
     "02 Documentation/attachments/Pasted image 20230820170011.png",
     "01 Project Management/Projects/Take a holiday in Spain.md",

@@ -9,11 +9,11 @@ dv.view('toc')
 
 ## Tasks
 
-A "task" in GTD is more correctly termed a [[Next Actions|Next Action]]. I'll be using the term "task" just to make things simple. Here's a [[Next Actions|refresher course on next actions]], including [[Next Actions#Why a "Next Action list" is so critical compared to a task list|the difference between a Next Action list and a standard task list]].
+A "task" in GTD is more correctly termed a [Next Action](GTD/Next%20Actions.md). I'll be using the term "task" just to make things simple. Here's a [refresher course on next actions](GTD/Next%20Actions.md), including [the difference between a Next Action list and a standard task list](Next%20Actions#Why%20a%20"Next%20Action%20list"%20is%20so%20critical%20compared%20to%20a%20task%20list).
 
 ### Your Master Task List
 
-Your tasks from everywhere in your vault are collected into a single master task list: [[✅ Tasks]]. It is split up into four sections:
+Your tasks from everywhere in your vault are collected into a single master task list: [✅ Tasks](../01%20Project%20Management/✅%20Tasks.md). It is split up into four sections:
 
 1. **⚠️ Projects without next actions**. Any project that shows up in this list needs you to go in and add "the next visible physical activity required to move the project forward" [(see GTD docs)](https://gettingthingsdone.com/2011/02/how-is-a-next-action-list-different-from-a-to-do-list/).
 2. **🔼 Priority**. These are next actions that you have marked as priority.
@@ -22,9 +22,9 @@ Your tasks from everywhere in your vault are collected into a single master task
 
 ### Next Actions list
 
-The master task list will automatically collect tasks from anywhere in your vault, it doesn't matter. But if you want to add individual tasks in a single location, you can use the [[📝 Next actions list]] list.
+The master task list will automatically collect tasks from anywhere in your vault, it doesn't matter. But if you want to add individual tasks in a single location, you can use the [📝 Next actions list](../01%20Project%20Management/📝%20Next%20actions%20list.md).
 
-As you get more and more completed tasks on that page, you'll likely want to [[#Clean-up/Archive completed tasks]].
+As you get more and more completed tasks on that page, you'll likely want to [Clean-up/Archive completed tasks](#Clean-up/Archive%20completed%20tasks).
 
 ### Excluding tasks
 
@@ -36,7 +36,7 @@ To exclude all tasks in a note from your master task list, add the tag #exclude-
 
 #### Exclude tasks under a named heading
 
-Have a look at [[2023-08-18|this daily note]] for an example. There is a **🌱 Daily Habits** section where I'm tracking the habits I want to do each day. I don't want these to show up in my master task list, so I have excluded it in the configuration in [[02 Documentation/tasks.js|tasks.js]]:
+Have a look at [this daily note](../Periodic%20notes/2023-08-18.md) for an example. There is a **🌱 Daily Habits** section where I'm tracking the habits I want to do each day. I don't want these to show up in my master task list, so I have excluded it in the configuration in [tasks.js](tasks.js.md):
 
 ```js
 const globalExclude = {
@@ -52,7 +52,7 @@ You can also exclude tasks under a heading by adding #exclude to that heading.
 
 #### Exclude all tasks in a folder and sub-folders
 
-This is especially important for excluding your templates folder. Just add the folder(s) into the configuration section in [[02 Documentation/tasks.js|tasks.js]].
+This is especially important for excluding your templates folder. Just add the folder(s) into the configuration section in [tasks.js](tasks.js.md)
 
 ```js
 const globalExclude = {
@@ -71,15 +71,15 @@ Add the tag #project into any note and you're done - it's now a project. The not
 
 ### Master projects list
 
-You can find a list of all your projects in the [[🗃️ Projects list]] master list page. This is a basic [Dataview query](https://blacksmithgu.github.io/obsidian-dataview/queries/structure/), so you can customise this however you like.
+You can find a list of all your projects in the [🗃️ Projects list](../01%20Project%20Management/🗃️%20Projects%20list.md) page. This is a basic [Dataview query](https://blacksmithgu.github.io/obsidian-dataview/queries/structure/), so you can customise this however you like.
 
 ### Sequencing tasks
 
 Inside a project, by default tasks inside each heading block are treated as steps that need to be completed sequentially (i.e. each task is dependent on the one before).
 
-In [[Overhaul TPS reports system|this example project]], the task to meet with David is waiting for the first task to be completed before it will show up in the task list.
+In [this example project](../01%20Project%20Management/Projects/Overhaul%20TPS%20reports%20system.md), the task to meet with David is waiting for the first task to be completed before it will show up in the task list.
 
-![[Pasted image 20230820170011.png|600]]
+![600](./attachments/Pasted%20image%2020230820170011.png)
 
 **If you don't want the tasks inside a project to be sequential**, you can include the 🟰 emoji anywhere in the heading for that section, and the tasks will be treated as if they are to be done in parallel.
 
@@ -99,4 +99,4 @@ To flag a task as someday/maybe, just add the tag #someday to the task. You can 
 
 If you have a lot of completed tasks on a page and want to archive them to a central location, there's a handy shortcut for that.
 
-On any page press `Alt+T` and choose `Archive/Remove completed tasks`. This will move tasks from that page to the [[🗄️ Completed tasks]] page.
+On any page press `Alt+T` and choose `Archive/Remove completed tasks`. This will move tasks from that page to the [🗄️ Completed tasks](../01%20Project%20Management/🗄️%20Completed%20tasks.md) page.

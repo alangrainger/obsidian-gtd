@@ -19,14 +19,14 @@ After some trial-and-error, I managed to write a workable implementation with Da
 - If a task is part of a project, the project information is displayed along with the task in the master task list
 - ⭐ Everything is done from a single Dataview script, which makes it highly configurable and adaptable for almost any use case
 
-![[Pasted image 20230821082403.png]]
+![](./02%20Documentation/attachments/Pasted%20image%2020230821082403.png)
 
 ## How to set up
 
 1. Download the GTD demo vault and test it out. This is an already-configured working vault which will give you an idea of whether you like the system, and what features of it you might want to implement in your own vault.
-2. The "brains" of the system is a single Dataview script: [[02 Documentation/tasks.js|tasks.js]]. You can put this anywhere in your vault and Dataview will find it. I personally like to put all my scripts in a single folder, like `Utility/Scripts/Dataview`.
+2. The "brains" of the system is a single Dataview script: [tasks.js](02%20Documentation/tasks.js.md). You can put this anywhere in your vault and Dataview will find it. I personally like to put all my scripts in a single folder, like `Utility/Scripts/Dataview`.
 3. You can optionally add the Templater user scripts and template from the `Utility/Scripts/Templater` and `Utility/Templates` folders. If you use this template, make sure to assign it to a hotkey.
 
-## Next step
+## Next steps
 
-[[How this works|Check out the documentation]]
+[See it in action](01%20Project%20Management/✅%20Tasks.md) or [Check out the documentation](02%20Documentation/How%20this%20works.md)
