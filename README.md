@@ -31,4 +31,4 @@ After some trial-and-error, I managed to write a workable implementation with Da
 
 ## Next steps
 
-[See it in action](01%20Project%20Management/✅%20Tasks.md) or [Check out the documentation](02%20Documentation/How%20this%20works.md)
+[See it in action](01%20Project%20Management/✅%20Tasks.md) or [Check out the documentation](02%20Documentation/Documentation.md)

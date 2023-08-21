@@ -6,19 +6,26 @@ obsidianUIMode: preview
 dv.view('toc')
 ```
 
+## How to set up
+
+1. [Download the GTD demo vault](https://github.com/alangrainger/obsidian-gtd/archive/refs/heads/main.zip) and test it out. This is an already-configured working vault which will give you an idea of whether you like the system, and what features of it you might want to implement in your own vault.
+2. The "brains" of the system is a single Dataview script: [tasks.js](tasks.js.md). You can put this anywhere in your vault and Dataview will find it. I personally like to put all my scripts in a single folder, like `Utility/Scripts/Dataview`.
+3. You can optionally add the Task Menu template to allow you to quickly perform actions via a hotkey. [Installation instructions are here](Task%20menu%20template.md).
 
 ## Tasks
 
-A "task" in GTD is more correctly termed a [Next Action](GTD/Next%20Actions.md). I'll be using the term "task" just to make things simple. Here's a [refresher course on next actions](GTD/Next%20Actions.md), including [the difference between a Next Action list and a standard task list](Next%20Actions#Why%20a%20"Next%20Action%20list"%20is%20so%20critical%20compared%20to%20a%20task%20list).
+> [!info] A sidenote about tasks
+> A "task" in GTD is more correctly termed a [Next Action](GTD/Next%20Actions.md). I'll be using the term "task" just to make things simple. Here's a [refresher course on next actions](GTD/Next%20Actions.md), including [the difference between a Next Action list and a standard task list](Next%20Actions#Why%20a%20"Next%20Action%20list"%20is%20so%20critical%20compared%20to%20a%20task%20list).
 
 ### Your Master Task List
 
-Your tasks from everywhere in your vault are collected into a single master task list: [✅ Tasks](../01%20Project%20Management/✅%20Tasks.md). It is split up into four sections:
+Your tasks from everywhere in your vault are collected into a single master task list: [✅ Tasks](../01%20Project%20Management/✅%20Tasks.md). It is split up into five sections:
 
 1. **⚠️ Projects without next actions**. Any project that shows up in this list needs you to go in and add "the next visible physical activity required to move the project forward" [(see GTD docs)](https://gettingthingsdone.com/2011/02/how-is-a-next-action-list-different-from-a-to-do-list/).
 2. **🔼 Priority**. These are next actions that you have marked as priority.
-3. **✅ Next actions**. Every other actionable item that is not priority.
-4. **💤 Someday**. A someday/maybe list is where you track anything that you might want to do "some day". 
+3. **⏳ Waiting on**. Tasks which are waiting for someone else to take an action before you can move to the next step.
+4. **✅ Next actions**. Every other actionable item that is not priority.
+5. **💤 Someday**. A someday/maybe list is where you track anything that you might want to do "some day". 
 
 ### Next Actions list
 
@@ -90,6 +97,10 @@ Pure GTD [doesn't make distinctions for priority](https://gettingthingsdone.com/
 To mark any **task** as priority, add the 🔼 symbol anywhere in the task text.
 
 To mark a **project** as priority, add a #🔼 tag. All of the tasks in this project will be marked as priority automatically.
+
+## Waiting on
+
+Quickly create a new #waiting-on task by using the `Alt+T` hotkey and choosing `Insert waiting on task`. This is useful when you're in a sequence of tasks in a project. You'll need to set up the [Task menu template](Task%20menu%20template.md) for this to work.
 
 ## Someday/Maybe
 

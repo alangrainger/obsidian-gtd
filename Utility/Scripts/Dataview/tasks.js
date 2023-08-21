@@ -122,11 +122,11 @@ dv.pages('-#project' + globalExcludeString)
   .forEach(page => {
     page.tasks
       .where(t =>
-        t.text &&
-        !t.completed &&
-        !t.tags.includes('#exclude') &&
+        t.text && // where the task has text (is not blank)
+        !t.completed && // and not completed
+        !t.tags.includes('#exclude') && // and not excluded
         (!t.header.subpath || !t.header.subpath.includes('exclude')) &&
-        !globalExclude.headings.includes(t.header.subpath)
+        !globalExclude.headings.includes(t.header.subpath) // and the heading is not excluded
       )
       .forEach(task => tasks.push(generateTaskElement(task, page)))
   })
