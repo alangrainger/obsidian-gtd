@@ -1,7 +1,7 @@
 {
   "propertiesInDocument": "hidden",
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "newLinkFormat": "relative",
   "showUnsupportedFiles": false
 }
