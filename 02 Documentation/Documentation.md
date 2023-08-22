@@ -71,6 +71,12 @@ const globalExclude = {
 }
 ```
 
+### Capturing tasks on mobile
+
+Capturing tasks quickly on Obsidian mobile can be quite a pain. When you need it the most it's gone into deep hibernation and takes about 20 seconds to start up.
+
+You can create your own quick-add tool for Android like this: [Mobile quick add](Mobile%20quick%20add.md)
+
 ## Projects
 
 ### Creating a project

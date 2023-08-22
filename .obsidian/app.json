@@ -3,5 +3,6 @@
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": false,
   "newLinkFormat": "relative",
-  "showUnsupportedFiles": false
+  "showUnsupportedFiles": false,
+  "attachmentFolderPath": "02 Documentation/attachments"
 }
