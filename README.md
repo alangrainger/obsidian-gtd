@@ -10,6 +10,8 @@ If you want to jump straight in and see it in action, here's the [Master Task Li
 
 For a long time I resisted doing my task management in Obsidian. I've always worked in the GTD task management style, and I found that there were two critical functions that I could not do in Obsidian: Sequencing of tasks in a project, and having a project appear in your next actions list *when it has no tasks* - e.g. when you need to add a next action to it.
 
+After some trial-and-error, I managed to write a workable implementation with Dataview. Even if you don’t use GTD or don’t want to implement it the same way, there are quite likely some useful gems in this script - for example having Dataview display a project info line underneath a task.
+
 ## Features
 
 - Task sequencing
