@@ -4,7 +4,7 @@ obsidianUIMode: preview
 
 If you want to jump straight in and see it in action, here's the [Master Task List](01%20Project%20Management/✅%20Tasks.md).
 
-⚠️ **NOTE:** This file is part of an Obsidian vault. You should be viewing this file through Obsidian, not Github.
+⚠️ **NOTE:** This file is part of an [Obsidian](https://obsidian.md/) vault. You should be viewing this file through Obsidian, not Github.
 
 # GTD in Obsidian
 
