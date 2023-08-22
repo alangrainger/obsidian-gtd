@@ -41,6 +41,14 @@ const excludeItems = ['', ...globalExclude.tags]
 globalExclude.folders.forEach(folder => excludeItems.push(`"${folder}"`))
 const globalExcludeString = excludeItems.join(' AND -')
 
+// Define groups for master tasklist page
+const Groups = {
+  Waiting:  0,
+  Priority: 1,
+  Normal:   2,
+  Someday:  3
+}
+
 /**
  * Take a task and the page it's from, and return a formatted element for the tasks array
  * @param {*} task 
@@ -48,18 +56,18 @@ const globalExcludeString = excludeItems.join(' AND -')
  * @returns {object}
  */
 function generateTaskElement(task, page) {
-  let priority = 2
+  let group = Groups.Normal
   if (task.tags.includes('#someday')) {
-    priority = 3
+    group = Groups.Someday
   } else if (task.tags.includes('#waiting-on')) {
-    priority = 0
+    group = Groups.Waiting
   } else if (task.text.includes('🔼') || page.tags.includes('#🔼')) {
-    priority = 1
+    group = Groups.Priority
   }
   return {
     task: task,
     date: (page.created ? page.created.ts || moment(page.created).valueOf() : null) || page.ctime.ts,
-    priority: priority
+    group: group
   }
 }
 
@@ -131,16 +139,16 @@ dv.pages('-#project' + globalExcludeString)
       .forEach(task => tasks.push(generateTaskElement(task, page)))
   })
 
-// Sort tasks into priorities, then ascending by created time
-tasks.sort((a, b) => a.priority - b.priority || a.date - b.date)
+// Sort tasks into groups, then ascending by created time
+tasks.sort((a, b) => a.group - b.group || a.date - b.date)
 
 /**
  * Output a formatted task list
- * @param {number|null} priority - Filter for tasks with this priority, or null for all tasks
+ * @param {number|null} group - Filter for tasks in a particular group, or null for all tasks
  * @param {string|null} header - The text header for the task list
  */
-function taskList(priority, header) {
-  const list = isNaN(priority) ? tasks : tasks.filter(x => x.priority === priority)
+function taskList(group, header) {
+  const list = isNaN(group) ? tasks : tasks.filter(x => x.group === group)
   if (list.length) {
     if (header) dv.header(2, header)
     dv.taskList(list.map(x => x.task), false)
@@ -154,7 +162,7 @@ if (noNextAction.length) {
 }
 
 // Output the task list
-taskList(1, '🔼 Priority',)
-taskList(0, '⏳ Waiting on...')
-taskList(2, '✅ Next actions')
-taskList(3, '💤 Someday')
+taskList(Groups.Priority, '🔼 Priority',)
+taskList(Groups.Waiting,  '⏳ Waiting on...')
+taskList(Groups.Normal,   '✅ Next actions')
+taskList(Groups.Someday,  '💤 Someday')
