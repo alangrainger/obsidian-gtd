@@ -9,7 +9,7 @@ There is an optional [Templater](https://github.com/SilentVoid13/Templater) temp
 The template requires two things to work:
 
 1. The [Tasks menu.md](../Utility/Templates/Tasks%20menu.md) template file. This needs to be placed in your Templater **Template folder location**.
-2. The two Templater user scripts in the `Utilty/Scripts/Templater` folder. These need to be placed in your Templater **User Scripts folder**.
+2. The two Templater user scripts in the `Utilty/Scripts/Templater` folder: [_init_template.js](https://github.com/alangrainger/obsidian-gtd/blob/main/Utility/Scripts/Templater/_init_template.js) and [templater_tasks.js](https://github.com/alangrainger/obsidian-gtd/blob/main/Utility/Scripts/Templater/templater_tasks.js). These need to be placed in your Templater **User Scripts folder**.
 
 ## Insert task
 
