@@ -78,8 +78,8 @@ function main(target) {
       // Not in edit mode, current line is unknowable
       return false
     } else {
-			const lineNumber = target.view.editor.getCursor().line
-			return target.view.editor.getLine(lineNumber)
+      const lineNumber = target.view.editor.getCursor().line
+      return target.view.editor.getLine(lineNumber)
     }
   }
 
