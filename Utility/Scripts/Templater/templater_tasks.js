@@ -47,17 +47,20 @@ class main {
       note.view.editor.setCursor({ line: 999, ch: 999 }) // Move the cursor to the end of the file
     }
     const cursor = note.view.editor.getCursor()
-    let prefix = ''
-    if (cursor.ch > 0) {
-      prefix = '\n'
+    const currentLine = note.getCurrentLine()
+    let prefix = '- [ ] '
+    if (currentLine === prefix) {
+      prefix = '' // We're already on a new task line
+    } else if (cursor.ch > 0) {
+      prefix = '\n' + prefix
     }
 
     const taskCreated = '➕' + moment().format('YYYY-MM-DD')
-    let task = `- [ ]  ${taskCreated}`
+    let task = ` ${taskCreated}`
 
     if (params) {
       if (params.type === 'waiting-on') {
-        task = `- [ ] #waiting-on  ${taskCreated}`
+        task = `#waiting-on  ${taskCreated}`
       }
     }
 
