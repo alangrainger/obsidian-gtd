@@ -1,4 +1,7 @@
 #project 
+```dataviewjs
+dv.view('project-progress')
+```
 
 ## Todo
 - [ ] #waiting-on Brent to email me back with a kitchen quote
