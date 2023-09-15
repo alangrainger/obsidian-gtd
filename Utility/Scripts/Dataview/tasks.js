@@ -114,7 +114,7 @@ dv.pages('#project' + globalExcludeString).file
               line: headingLine, // We need this to be able to jump to the heading when clicked
               lineCount: task.lineCount,
               position: task.position,
-              text: `*🗃️ ${project.name}${subSection}*`
+              text: `🗃️ *${project.name}${subSection}*`
             })
             tasks.push(generateTaskElement(task, project))
           }
