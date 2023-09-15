@@ -157,7 +157,7 @@ function taskList(group, header) {
 
 // Projects without next action
 if (noNextAction.length) {
-  dv.header(2, '⚠️ Projects without next actions')
+  dv.header(2, '🚩 Projects without next actions')
   dv.list(noNextAction.map(p => p.link))
 }
 

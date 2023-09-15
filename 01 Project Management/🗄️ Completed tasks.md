@@ -1,3 +1,4 @@
+# 🗄️ Completed tasks
 
 *This is an archive of all completed tasks. Use the tasks (Alt + T) "Archive tasks" function on any page to move the tasks here.*
 

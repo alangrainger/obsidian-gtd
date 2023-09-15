@@ -1,8 +1,9 @@
 {
   "propertiesInDocument": "hidden",
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": false,
+  "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "showUnsupportedFiles": false,
-  "attachmentFolderPath": "02 Documentation/attachments"
+  "attachmentFolderPath": "02 Documentation/attachments",
+  "showInlineTitle": false
 }

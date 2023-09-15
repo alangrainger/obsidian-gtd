@@ -1,3 +1,8 @@
+---
+obsidianUIMode: preview
+---
+# tasks.js
+
 This is the main Dataview script and is located in:
 
 ```

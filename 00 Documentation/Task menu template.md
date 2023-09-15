@@ -1,6 +1,8 @@
 ---
 exclude_master_tasklist: true
+obsidianUIMode: preview
 ---
+# Task menu template
 
 There is an optional [Templater](https://github.com/SilentVoid13/Templater) template which you can assign to a hotkey, to give a handy task menu. The default hotkey is `Alt+T`.
 

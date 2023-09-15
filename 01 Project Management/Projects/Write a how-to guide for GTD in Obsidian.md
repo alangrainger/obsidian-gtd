@@ -1,4 +1,5 @@
-#project #🔼
+# Write a how-to guide for GTD in Obsidian
+#project 
 ```dataviewjs
 dv.view('project-progress')
 ```

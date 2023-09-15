@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9a27cf182ed2453f",
+        "id": "953676c53574611d",
         "type": "tabs",
         "children": [
           {
-            "id": "e5849d7c5a5a326f",
+            "id": "d3c713293155d043",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -128,6 +128,16 @@
                 "file": "README.md"
               }
             }
+          },
+          {
+            "id": "b6014d885129e0f5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
           }
         ],
         "currentTab": 3
@@ -150,58 +160,55 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5,
-    "collapsed": true
+    "width": 257.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e5849d7c5a5a326f",
+  "active": "d3c713293155d043",
   "lastOpenFiles": [
-    "02 Documentation/tasks.js.md",
     "Periodic notes/2023-08-18.md",
-    "02 Documentation/How this works.md",
-    "README.md",
+    "00 Documentation/Task menu template.md",
+    "00 Documentation/Documentation.md",
+    "00 Documentation/GTD/Next Actions.md",
+    "00 Documentation/tasks.js.md",
+    "00 Documentation/Mobile quick add.md",
+    "Utility/Templates/Tasks menu.md",
+    "Utility/Templates/New note.md",
+    "Utility/Templates/@-mention person.md",
+    "Utility/Templates/New note templates/Person.md",
+    "Utility/Templates/New note templates/Project.md",
+    "People/👤David.md",
+    "People/👤Brent.md",
+    "People/👤Mum.md",
+    "People/👤Lumbergh.md",
+    "People/👤Jim.md",
+    "Utility/Templates/New note templates/Meeting.md",
+    "Utility/Templates/New note templates/! Default note.md",
+    "01 Project Management/Projects/Write a how-to guide for GTD in Obsidian.md",
+    "01 Project Management/Projects/Take a holiday in Spain.md",
+    "01 Project Management/Projects/Renovate the kitchen.md",
+    "01 Project Management/Projects/Overhaul TPS reports system.md",
     "01 Project Management/🗃️ Projects list.md",
+    "01 Project Management/🗄️ Completed tasks.md",
+    "01 Project Management/📝 Next actions list.md",
     "01 Project Management/✅ Tasks.md",
-    "02 Documentation/GTD/Next Actions.md",
+    "Utility/Scripts/Dataview/mentions-table.js",
+    "People",
+    "02 Vault",
+    "01 Project Management/Meetings",
+    "Utility/Templates/New note templates",
     "99 Utility/Scripts/Dataview/tasks.js",
     "99 Utility/Scripts/Dataview",
     "99 Utility/Scripts",
     "99 Utility",
-    "02 Project Management/Projects/Some sample project.md",
     "02 Documentation/attachments/Pasted image 20230821082403.png",
-    "01 Project Management/📝 Next actions list.md",
-    "01 Project Management/Projects/Overhaul TPS reports system.md",
-    "01 Project Management/🗄️ Completed tasks.md",
-    "02 Documentation/attachments",
-    "02 Documentation/attachments/Pasted image 20230820170011.png",
-    "01 Project Management/Projects/Take a holiday in Spain.md",
-    "01 Project Management/Projects/Write a how-to guide for GTD in Obsidian.md",
-    "Next Action.md",
-    "Utility/Scripts/Templater/templater_tasks.js",
-    "99 Utility/Scripts/Templater/templater-tasks.js",
-    "Utility/Scripts/Dataview/toc.js",
-    "01 Project Management/Projects",
-    "Utility/Templates/Tasks menu.md",
-    "99 Utility/Templates/Tasks - main menu.md",
-    "99 Utility/Templates/Tasks - Insert new task.md",
-    "Utility/Templates",
-    "90 Resources/GTD.md",
-    "General tasks.md",
-    "Tasks - Tasks.md",
-    "Projects/Proj with tasks.md",
-    "Tasks - Dataview.md",
-    "Docs/Dataview/Understanding Tasks emojis.md",
-    "Tests/Dataview tables.md",
-    "Projects/Proj with headings.md"
+    "00 Documentation/attachments",
+    "00 Documentation/attachments/Pasted image 20230820170011.png"
   ]
 }

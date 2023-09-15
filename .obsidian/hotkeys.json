@@ -14,5 +14,22 @@
       ],
       "key": "T"
     }
+  ],
+  "templater-obsidian:Utility/Templates/New note.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ],
+  "file-explorer:new-file": [],
+  "templater-obsidian:Utility/Templates/@-mention person.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "2"
+    }
   ]
 }

@@ -1,3 +1,8 @@
+---
+obsidianUIMode: preview
+---
+# Mobile quick add
+
 Capturing tasks quickly on Obsidian mobile can be quite a pain. When you need it the most it's gone into deep hibernation and takes about 20 seconds to start up.
 
 Using the free app Automate ([Play Store link](https://play.google.com/store/apps/details?id=com.llamalab.automate)), you can create a quick-add tool that lets you instantly capture tasks, while also ensuring that your vault syncs properly.

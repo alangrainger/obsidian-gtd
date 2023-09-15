@@ -1,6 +1,7 @@
 ---
 obsidianUIMode: preview
 ---
+# Documentation
 
 ```dataviewjs
 dv.view('toc')
@@ -16,7 +17,7 @@ dv.view('toc')
 
 > [!info] A sidenote about tasks
 > 
-> A "task" in GTD is more correctly termed a [Next Action](GTD/Next%20Actions.md). I'll be using the term "task" just to make things simple. Here's a [refresher course on next actions](GTD/Next%20Actions.md), including [the difference between a Next Action list and a standard task list](Next%20Actions#Why%20a%20"Next%20Action%20list"%20is%20so%20critical%20compared%20to%20a%20task%20list).
+> A "task" in GTD is more correctly termed a [Next Action](GTD/Next%20Actions.md). I'll be using the term "task" just to make things simple. Here's a [refresher course on next actions](GTD/Next%20Actions.md), including [the difference between a Next Action list and a standard task list](GTD/Next%20Actions.md#Why%20a%20"Next%20Action%20list"%20is%20so%20critical%20compared%20to%20a%20task%20list).
 
 ### Your Master Task List
 
@@ -93,7 +94,7 @@ Inside a project, by default tasks inside each heading block are treated as step
 
 In [this example project](../01%20Project%20Management/Projects/Overhaul%20TPS%20reports%20system.md), the task to meet with David is waiting for the first task to be completed before it will show up in the task list.
 
-![600](./attachments/Pasted%20image%2020230820170011.png)
+![600](attachments/Pasted%20image%2020230820170011.png)
 
 **If you don't want the tasks inside a project to be sequential**, you can include the 🟰 emoji anywhere in the heading for that section, and the tasks will be treated as if they are to be done in parallel.
 

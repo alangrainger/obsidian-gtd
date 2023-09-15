@@ -1,7 +1,10 @@
 ---
 aliases:
   - Next Action
+obsidianUIMode: preview
 ---
+# Next Actions
+
 ### What is a Next Action?
 
 A "task" in GTD is more correctly termed a **Next Action**. A Next Action is "[the next visible physical activity required to move something forward](https://gettingthingsdone.com/2011/02/how-is-a-next-action-list-different-from-a-to-do-list/)". It may be part of a larger project, or it may be a single standalone item.
