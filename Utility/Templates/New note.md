@@ -2,7 +2,16 @@
 // New note template configuration
 
 const templatesFolders = ['Utility/Templates/New note templates']
-const openNewNoteInSplit = true // Set this to true if you want the new note to open in a split to the right
+const openNewNoteInSplit = false // Set this to true if you want the new note to open in a split to the right
+
+/*
+
+Full instructions here:
+https://file.obsidianshare.com/39/d94864621210a0bd9fe6394e568d0789.html#6PsosV+mFvd87dqXnkCXAT58xjEjsM6FY/z6cqbrAZ4
+
+*/
+
+
 
 // -------------------------------------
 // Nothing to configure after this point
@@ -31,7 +40,14 @@ const templates = templateFiles.map(path => {
   }
 })
 
-createFromTemplate = async function (templatePath, newNoteName, destinationFolder, openNewNote) {
+/**
+ * Create a new note from a Templater template.
+ * @param {string} templatePath - Full vault path to the template file
+ * @param {string} newNoteName - Title / filename of the new note
+ * @param {string} destinationFolder - Full vault path to the destination folder
+ * @param {boolean} [openNewNote] - Optional: Open the new note after creating it
+ */
+async function createFromTemplate (templatePath, newNoteName, destinationFolder, openNewNote = false) {
   destinationFolder = destinationFolder || tp.file.folder(true)
   const newFile = await tp.file.create_new(tp.file.find_tfile(templatePath), newNoteName, openNewNote, app.vault.getAbstractFileByPath(destinationFolder))
   // Remove the template properties from the new file
@@ -42,15 +58,31 @@ createFromTemplate = async function (templatePath, newNoteName, destinationFolde
   return openNewNote ? '' : `[[${newNoteName}]]`
 }
 
+/**
+   * Takes a note filename/title, and replaces any filesystem-unsafe characters
+   * with Unicode characters that look the same
+   * @param {string} title 
+   * @returns {string}
+   */
+function makeFilesystemSafeTitle (title) {
+  // https://stackoverflow.com/questions/10386344/how-to-get-a-file-in-windows-with-a-colon-in-the-filename
+  // some replacements: ” ‹ › ⁎ ∕ ⑊ ＼︖ ꞉ ⏐
+  title = title.replace(/:/g, '꞉')
+  title = title.replace(/\//g, '∕')
+  return title
+}
+
 const chosen = await tp.system.suggester(templates.map(x => x.label), templates)
 if (!chosen) return ''
-const name = (await tp.system.prompt('Name for the new file. Will use the current date/time if no value given.', chosen.title || '')) || moment().format('YYYY-MM-DD HH꞉mm꞉ss')
+let title = (await tp.system.prompt('Name for the new file. Will use the current date/time if no value given.', chosen.title || '')) || moment().format('YYYY-MM-DD HH꞉mm꞉ss')
+if (typeof title !== 'string') return '' // Prompt was cancelled
+title = makeFilesystemSafeTitle(title)
 const addLink = await tp.system.suggester(['Yes', 'No'], [true, false], false, 'Insert link in the current file? (Escape = no)')
 const destination = chosen.destinationFolder || tp.file.folder(true)
-const result = await createFromTemplate(chosen.templatePath, name, destination, !addLink && !openNewNoteInSplit)
+const result = await createFromTemplate(chosen.templatePath, title, destination, !addLink && !openNewNoteInSplit)
 if (openNewNoteInSplit) {
   // Open the new file in a pane to the right
-  const file = app.vault.getAbstractFileByPath(`${destination}/${name}.md`)
+  const file = app.vault.getAbstractFileByPath(`${destination}/${title}.md`)
   // Create the new leaf
   const newLeaf = app.workspace.getLeaf('split')
   await newLeaf.openFile(file)
