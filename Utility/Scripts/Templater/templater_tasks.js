@@ -1,3 +1,9 @@
+/*
+ * Set this to be the full path for the note where you want to store your completed tasks
+ * Docs: https://github.com/alangrainger/obsidian-gtd/blob/main/00%20Documentation/Task%20menu%20template.md#archiveremove-completed-tasks
+*/
+const completedTasksNote = '01 Project management/🗄️ Completed tasks.md'
+
 class main {
   constructor() {
     const tp = app.plugins.plugins['templater-obsidian'].templater.current_functions_object
@@ -89,8 +95,6 @@ class main {
   }
 
   async removeCompletedTasks(note) {
-    const completedTasksNote = '05 Project management/🗄️ Completed tasks.md'
-
     if (note.file.path === completedTasksNote) {
       // Don't perform archive function if we're inside the completed tasks note
       return
