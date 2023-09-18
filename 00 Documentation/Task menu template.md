@@ -36,3 +36,9 @@ Toggles the #someday tag on the current task.
 ## Archive/Remove completed tasks
 
 Will move all completed tasks from the current page to the [🗄️ Completed tasks](../01%20Project%20Management/🗄️%20Completed%20tasks.md) page. This is especially handy for cleaning up the [📝 Next actions list](../01%20Project%20Management/📝%20Next%20actions%20list.md).
+
+To use this feature you will need to configure the location of the note you want to store your completed tasks. On line 5 of `templater_tasks.js`, change this to be the full path to your desired note:
+
+```
+const completedTasksNote = '01 Project management/🗄️ Completed tasks.md'
+```
