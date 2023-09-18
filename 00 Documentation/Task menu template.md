@@ -27,11 +27,11 @@ If you don't like having the date you can remove it from the template.
 
 This will pre-populate the new task with the #waiting-on tag:
 
-- [ ] #waiting-on Dave to deliver the report ➕2023-08-21
+- [ ] `#waiting-on` Dave to deliver the report ➕2023-08-21
 
 ## Toggle somedate
 
-Toggles the #someday tag on the current task.
+Toggles the `#someday` tag on the current task.
 
 ## Archive/Remove completed tasks
 
