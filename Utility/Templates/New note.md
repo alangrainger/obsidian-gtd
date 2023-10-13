@@ -6,8 +6,7 @@ const openNewNoteInSplit = false // Set this to true if you want the new note to
 
 /*
 
-Full instructions here:
-https://file.obsidianshare.com/39/d94864621210a0bd9fe6394e568d0789.html#6PsosV+mFvd87dqXnkCXAT58xjEjsM6FY/z6cqbrAZ4
+Full instructions here: https://share.note.sx/2rskmna5
 
 */
 
