@@ -2,7 +2,32 @@
  * Set this to be the full path for the note where you want to store your completed tasks
  * Docs: https://github.com/alangrainger/obsidian-gtd/blob/main/00%20Documentation/Task%20menu%20template.md#archiveremove-completed-tasks
 */
-const completedTasksNote = '01 Project management/🗄️ Completed tasks.md'
+const completedTasksNote = '01 Project Management/🗄️ Completed tasks.md'
+const taskLinePattern = /^[ \t]*- \[[ x]\]/
+
+const isLineATask = (line) => line.match(taskLinePattern) !== null
+
+const toggleIndicator = (note, indicator) => {
+  if (!note.isEditMode()) {
+    // Not in editing mode, so it's uncertain which task we want to affect
+    return ''
+  }
+  const line = note.getCurrentLine()
+  if (!isLineATask(line)) {
+    return
+  }
+  const indicatorWithWhitespacePattern = new RegExp(` *${indicator} *`, 'g')
+
+  if (line.match(indicator)) {
+    // remove indicator anywhere in the line including adjacent whitespace and trim the end of it
+    note.setCurrentLine(line.replaceAll(indicatorWithWhitespacePattern, ' ').trimEnd())
+    return
+  } else {
+    // append indicator to end of line
+    note.setCurrentLine(`${line} ${indicator}`)
+    return
+  }
+}
 
 class main {
   constructor() {
@@ -26,6 +51,10 @@ class main {
       {
         label: 'Toggle #someday',
         function: this.toggleSomeday
+      },
+      {
+        label: 'Toggle 🔼',
+        function: this.togglePriority
       },
       {
         label: 'Archive/Remove completed tasks',
@@ -82,16 +111,13 @@ class main {
   }
 
   toggleSomeday(note) {
-    if (!note.isEditMode()) {
-      // Not in editing mode, so it's uncertain which task we want to affect
-      return ''
-    }
-    const line = note.getCurrentLine()
-    if (line.match(/ #someday/)) {
-      return ''
-    } else {
-      return ' #someday'
-    }
+    toggleIndicator(note, '#someday')
+    return ''
+  }
+
+  togglePriority(note) {
+    toggleIndicator(note, '🔼')
+    return ''
   }
 
   async removeCompletedTasks(note) {
@@ -104,6 +130,11 @@ class main {
     const currentNoteContents = await note.getContents()
     const taskRegex = /(?<=(^|\n))[ \t]*- \[x\].*?(\n|$)/sg
     const completedTasks = currentNoteContents.match(taskRegex)
+
+    if (!completedTasks) {
+      // Don't perform archive function if there is nothing to archive
+      return
+    }
 
     // Append tasks to the achive completed tasks note
     let completedNoteContent = await note.getContents(completedTasksNote)

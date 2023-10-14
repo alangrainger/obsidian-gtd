@@ -83,6 +83,25 @@ function main(target) {
     }
   }
 
+  /**
+   * set the text of the current line, if in editing mode
+   * @param {string}
+   * @returns {boolean}
+   */
+  target.setCurrentLine = function (newLineContent) {
+    if (!target.isEditMode()) {
+      // Not in edit mode, current line is unknowable
+      return false
+    } else {
+      const lineNumber = target.view.editor.getCursor().line
+      target.view.editor.setLine(lineNumber, newLineContent)
+      // move cursor to end of line
+      target.view.editor.setCursor({ line: lineNumber, ch: newLineContent.length })
+
+      return true
+    }
+  }
+
   target.goToFile = async function (path) {
     const file = app.vault.getAbstractFileByPath(path)
     if (path !== target.file.path) {
