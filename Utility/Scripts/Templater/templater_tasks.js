@@ -53,7 +53,7 @@ class main {
         function: this.toggleSomeday
       },
       {
-        label: 'Toggle 🔼',
+        label: 'Toggle priority 🔼',
         function: this.togglePriority
       },
       {
