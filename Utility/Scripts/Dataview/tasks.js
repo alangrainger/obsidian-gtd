@@ -131,7 +131,7 @@ dv.pages('-#project' + globalExcludeString)
     page.tasks
       .where(t =>
         t.text && // where the task has text (is not blank)
-        !t.completed && // and not completed
+        !(t.completed || t.status == "-") && // and not completed or cancelled
         !t.tags.includes('#exclude') && // and not excluded
         (!t.header.subpath || !t.header.subpath.includes('exclude')) &&
         !globalExclude.headings.includes(t.header.subpath) // and the heading is not excluded
