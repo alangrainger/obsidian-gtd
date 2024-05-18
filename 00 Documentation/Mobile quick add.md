@@ -13,6 +13,8 @@ The Automate flow is very simple:
 2. Pop up a text input field.
 3. Append to your mobile tasks note with the input from the previous step.
 
+This is an export of my own template, but you'll need to customise this to change the save location and other details: [Quick add task to Obsidian - Automate for Android.flo](https://raw.githubusercontent.com/alangrainger/obsidian-gtd/main/00%20Documentation/attachments/Quick%20add%20task%20to%20Obsidian%20-%20Automate%20for%20Android.flo)
+
 Here's what it looks like in action:
 
 ![350](attachments/ef2dfe619fd96a00f3efc4514687f1262d4ac507.gif)
