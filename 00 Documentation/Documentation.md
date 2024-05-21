@@ -98,6 +98,10 @@ In [this example project](../01%20Project%20Management/Projects/Overhaul%20TPS%2
 
 **If you don't want the tasks inside a project to be sequential**, you can include the 🟰 emoji anywhere in the heading for that section, and the tasks will be treated as if they are to be done in parallel.
 
+### Completing a project
+
+To completed a project and exclude it from appearing the master task list, you can either add a `#completed` tag, or check a frontmatter checkbox property for `completed`.
+
 ## Statuses
 
 ### Priority
@@ -106,7 +110,7 @@ Pure GTD [doesn't make distinctions for priority](https://gettingthingsdone.com/
 
 To mark any **task** as priority, add the 🔼 symbol anywhere in the task text.
 
-To mark a **project** as priority, add a #🔼 tag. All of the tasks in this project will be marked as priority automatically.
+To mark a **project** as priority, add a `#🔼` tag. All of the tasks in this project will be marked as priority automatically.
 
 ### Waiting on
 
