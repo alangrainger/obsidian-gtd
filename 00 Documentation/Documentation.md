@@ -100,7 +100,7 @@ In [this example project](../01%20Project%20Management/Projects/Overhaul%20TPS%2
 
 ### Completing a project
 
-To completed a project and exclude it from appearing the master task list, you can either add a `#completed` tag, or check a frontmatter checkbox property for `completed`.
+To completed a project and exclude it from appearing the master task list, you can either add a `#completed` tag to the project note, or check a frontmatter checkbox property for `completed`.
 
 ## Statuses
 
