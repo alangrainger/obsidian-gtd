@@ -67,10 +67,22 @@ function generateTaskElement (task, page) {
   } else if (task.text.includes('🔼') || page.tags.includes('#🔼')) {
     group = Groups.Priority
   }
+
+  // Get the created date of a task for sorting, either from the task text
+  // in the format of ➕2024-04-20, or from the page metadata.
+  let date
+  const hasDate = task?.text?.match(/➕\s?(\d{4}-\d{2}-\d{2})/)
+  if (hasDate) { // Task inline created date
+    date = moment(hasDate[1].valueOf())
+  } else if (page.created) { // Page `created` frontmatter property
+    date = page.created?.ts || moment(page.created).valueOf()
+  }
+  date = date || page.ctime.ts
+
   return {
-    task: task,
-    date: (page.created ? page.created.ts || moment(page.created).valueOf() : null) || page.ctime.ts,
-    group: group
+    task,
+    date,
+    group
   }
 }
 
@@ -135,8 +147,8 @@ dv.pages('-#project' + globalExcludeString)
     page.tasks
       .where(t => {
         if (hideFutureScheduledTasks) {
-          // Check for a scheduled date
-          let scheduledDate = t?.text?.match(/⏳\s?(\d{4}-\d{2}-\d{2})/)
+          // Check for a scheduled date in the format of ⏳2024-04-20
+          const scheduledDate = t?.text?.match(/⏳\s?(\d{4}-\d{2}-\d{2})/)
           if (scheduledDate) {
             // Check if the date is in the future
             if (moment(scheduledDate[1]) > moment()) {
