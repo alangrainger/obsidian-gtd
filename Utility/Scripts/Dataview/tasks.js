@@ -43,19 +43,19 @@ const globalExcludeString = excludeItems.join(' AND -')
 
 // Define groups for master tasklist page
 const Groups = {
-  Waiting:  0,
+  Waiting: 0,
   Priority: 1,
-  Normal:   2,
-  Someday:  3
+  Normal: 2,
+  Someday: 3
 }
 
 /**
  * Take a task and the page it's from, and return a formatted element for the tasks array
- * @param {*} task 
- * @param {*} page 
+ * @param {*} task
+ * @param {*} page
  * @returns {object}
  */
-function generateTaskElement(task, page) {
+function generateTaskElement (task, page) {
   let group = Groups.Normal
   if (task.tags.includes('#someday')) {
     group = Groups.Someday
@@ -74,7 +74,8 @@ function generateTaskElement(task, page) {
 /*
  * Process projects
  */
-dv.pages('#project' + globalExcludeString).file
+dv.pages('#project' + globalExcludeString)
+  .where(project => !project.completed).file
   .forEach(project => {
     const sections = []
     if (!project.tasks.filter(t => !t.completed && t.text).length) {
@@ -147,7 +148,7 @@ tasks.sort((a, b) => a.group - b.group || a.date - b.date)
  * @param {number|null} group - Filter for tasks in a particular group, or null for all tasks
  * @param {string|null} header - The text header for the task list
  */
-function taskList(group, header) {
+function taskList (group, header) {
   const list = isNaN(group) ? tasks : tasks.filter(x => x.group === group)
   if (list.length) {
     if (header) dv.header(2, header)
@@ -163,6 +164,6 @@ if (noNextAction.length) {
 
 // Output the task list
 taskList(Groups.Priority, '🔼 Priority',)
-taskList(Groups.Waiting,  '⏳ Waiting on...')
-taskList(Groups.Normal,   '✅ Next actions')
-taskList(Groups.Someday,  '💤 Someday')
+taskList(Groups.Waiting, '⏳ Waiting on...')
+taskList(Groups.Normal, '✅ Next actions')
+taskList(Groups.Someday, '💤 Someday')
