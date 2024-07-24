@@ -2,11 +2,11 @@
  * ---------------------
  * CONFIGURATION OPTIONS
  * ---------------------
- *
- * Add the folders, tags, and headings which should be excluded.
- * Tasks found on pages with these tags or paths will not appear in the Tasks page.
- * Headings will to exclude tasks that fall under a heading with this name.
  */
+
+// Add the folders, tags, and headings which should be excluded.
+// Tasks found on pages with these tags or paths will not appear in the Tasks page.
+// Headings will to exclude tasks that fall under a heading with this name.
 const globalExclude = {
   folders: [
     'Utility'
@@ -19,14 +19,17 @@ const globalExclude = {
     '🌱 Daily Habits'
   ]
 }
-/*
- * When displaying tasks from a project, tasks that fall under headings with these
- * names won't have these headings displayed when showing the project info
- */
+
+// When displaying tasks from a project, tasks that fall under headings with these
+// names won't have these headings displayed when showing the project info
 const hideSubsectionName = [
   'Todo',
   'Tasks'
 ]
+
+// If you are using the Tasks plugin, you can hide tasks which are scheduled in the future.
+// They will have a date in the format ⏳ 2021-04-09
+const hideFutureScheduledTasks = false
 
 /*
  * ----------------------------
@@ -130,13 +133,25 @@ dv.pages('-#project' + globalExcludeString)
   .where(p => p.file.tasks.length && !p['kanban-plugin'] && !p['exclude_master_tasklist']).file
   .forEach(page => {
     page.tasks
-      .where(t =>
-        t.text && // where the task has text (is not blank)
-        !t.completed && // and not completed
-        !t.tags.includes('#exclude') && // and not excluded
-        (!t.header.subpath || !t.header.subpath.includes('exclude')) &&
-        !globalExclude.headings.includes(t.header.subpath) // and the heading is not excluded
-      )
+      .where(t => {
+        if (hideFutureScheduledTasks) {
+          // Check for a scheduled date
+          let scheduledDate = t?.text?.match(/⏳\s?(\d{4}-\d{2}-\d{2})/)
+          if (scheduledDate) {
+            // Check if the date is in the future
+            if (moment(scheduledDate[1]) > moment()) {
+              // Skip and move on to the next task
+              return false
+            }
+          }
+        }
+
+        return t.text && // where the task has text (is not blank)
+          !t.completed && // and not completed
+          !t.tags.includes('#exclude') && // and not excluded
+          (!t.header.subpath || !t.header.subpath.includes('exclude')) &&
+          !globalExclude.headings.includes(t.header.subpath) // and the heading is not excluded
+      })
       .forEach(task => tasks.push(generateTaskElement(task, page)))
   })
 
