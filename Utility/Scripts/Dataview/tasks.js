@@ -107,7 +107,7 @@ dv.pages('#project' + globalExcludeString).file
               headingLine = match ? match.position.start.line : task.line - 1
             }
             // By adding this subtask, we can get a sub-line with the project and/or heading names
-            task.subtasks.push({
+            task?.subtasks?.push({
               children: [],
               path: task.path,
               link: task.link,
