@@ -172,11 +172,16 @@ tasks.sort((a, b) => a.group - b.group || a.date - b.date)
 
 /**
  * Output a formatted task list
- * @param {number|null} group - Filter for tasks in a particular group, or null for all tasks
+ * @param {number|null} group  - Filter for tasks in a particular group, or null for all tasks
  * @param {string|null} header - The text header for the task list
+ * @param {string} [tag]       - Any tag to filter by - this could be for @contexts
  */
-function taskList (group, header) {
-  const list = isNaN(group) ? tasks : tasks.filter(x => x.group === group)
+function taskList (group, header, tag) {
+  let list = isNaN(group) ? tasks : tasks.filter(x => x.group === group)
+
+  // If there are contexts (or any other tag) specified
+  if (tag) list = list.filter(x => x.task.tags.includes(tag))
+
   if (list.length) {
     if (header) dv.header(2, header)
     dv.taskList(list.map(x => x.task), false)

@@ -78,6 +78,18 @@ Capturing tasks quickly on Obsidian mobile can be quite a pain. When you need it
 
 You can create your own quick-add tool for Android like this: [Mobile quick add](Mobile%20quick%20add.md)
 
+### Contexts
+
+If you want to use contexts (`@home`, `@work`, etc), an easy way to do this is with tags. You can use any tags that you like. Here's an example, but again, you can use anything that works for you:
+
+- [ ] An example task with context #contexts/home
+
+Then, edit the bottom of your [tasks.js](tasks.js.md) file to create a new block which filters by your chosen tag. In the case of the example above, you could add:
+
+```js
+taskList(Groups.Normal, '🏠 Home', '#contexts/home')
+```
+
 ## Projects
 
 ### Creating a project
