@@ -1,3 +1,3 @@
 const tasks = dv.current().file.tasks
 const percent = Math.round(tasks.filter(x => x.completed).length / tasks.length * 100)
-dv.paragraph(`![](https://progress-bar.xyz/${percent|| 0}/?width=200&title=Progress&color=333333)`)
+dv.paragraph(`<progress max="100" value="${percent}"></progress> ${percent}%`)
