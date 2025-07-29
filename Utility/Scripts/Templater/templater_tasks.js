@@ -3,6 +3,7 @@
  * Docs: https://github.com/alangrainger/obsidian-gtd/blob/main/00%20Documentation/Task%20menu%20template.md#archiveremove-completed-tasks
 */
 const completedTasksNote = '01 Project Management/🗄️ Completed tasks.md'
+const somedayTasksNote = '01 Project Management/💤 Someday.md'
 const taskLinePattern = /^[ \t]*- \[[ x]\]/
 
 const isLineATask = (line) => line.match(taskLinePattern) !== null
@@ -57,6 +58,10 @@ class main {
         function: this.togglePriority
       },
       {
+        label: 'Move #someday tasks',
+        function: this.moveSomedayTasks
+      },
+      {
         label: 'Archive/Remove completed tasks',
         function: this.removeCompletedTasks
       }
@@ -71,15 +76,15 @@ class main {
   }
 
   /**
-   * Inserts a new task. 
-   * If the file is in edit mode, it inserts the task at the current position. 
+   * Inserts a new task.
+   * If the file is in edit mode, it inserts the task at the current position.
    * If the file is in read mode, it changes to edit mode and adds the task at the end of the file.
    */
   insertNewTask(note, params) {
     if (!note.isEditMode()) {
       // File is currently in Read mode
       note.setEditMode(true)
-      note.view.editor.setCursor({ line: 999, ch: 999 }) // Move the cursor to the end of the file
+      note.view.editor.setCursor({ line: 9999, ch: 9999 }) // Move the cursor to the end of the file
     }
     const cursor = note.view.editor.getCursor()
     const currentLine = note.getCurrentLine()
@@ -149,6 +154,36 @@ class main {
       })
       .join('')
     note.setContents(completedNoteContent, completedTasksNote).then()
+
+    // Remove tasks from the current note
+    await note.setContents(currentNoteContents.replace(taskRegex, ''))
+  }
+
+  async moveSomedayTasks(note) {
+    if (note.file.path === somedayTasksNote) {
+      // Don't perform archive function if we're inside the #someday tasks note
+      return
+    }
+
+    // Find all #someday tasks in the current note
+    const currentNoteContents = await note.getContents()
+    const taskRegex = /(?<=(^|\n))[ \t]*- \[.\][^\n]*?#someday[^\n]*?(\n|$)/sg
+    const somedayTasks = currentNoteContents.match(taskRegex)
+
+    if (!somedayTasks) {
+      // Don't perform archive function if there is nothing to archive
+      return
+    }
+
+    // Append tasks to the #someday tasks note
+    let somedayNoteContent = await note.getContents(somedayTasksNote)
+    somedayNoteContent += somedayTasks
+      .map(task => {
+        task = task.trimEnd()
+        return task + '\n'
+      })
+      .join('')
+    note.setContents(somedayNoteContent, somedayTasksNote).then()
 
     // Remove tasks from the current note
     await note.setContents(currentNoteContents.replace(taskRegex, ''))
